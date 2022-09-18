@@ -1,0 +1,55 @@
+
+body{
+	height: 100%;
+	background-color: #dea450;
+}
+.wc{
+	background-color: #dea450;
+	color: #9b461f;
+	position: absolute;
+	
+	left: 0;
+	
+	top: 0;
+	
+	right: 0;
+	
+	bottom: 0;
+	
+	font-weight: 20vm;
+	margin-bottom: 0vw;
+
+}
+.wc h1{
+	margin-left: 10vw;
+	margin-top: -10vh;
+	font-weight: bolder;
+	font-size: 4vw;
+	letter-spacing:1vw;
+	width: 60vw;
+
+}
+.wc h2{
+	margin-left: 10vw;
+	margin-top: 28vh;
+	font-weight: bolder;
+	font-size: 6vw;
+	width: 60vw;
+}
+.tx{
+	margin-left: 70vw;
+	margin-top: -45vh;
+	width: 21vw;
+	height: 28vw;
+}
+.tx img{
+	border-radius:20px;
+}
+.more{
+	width: 100vw;
+	height: 100vh;
+	margin-left: -1vw;
+	background-color: #9b461f;
+}
+
+
