@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>山鬼的课内实验</title>
+	<link rel="stylesheet" type="text/css" href="css/default.css" />
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" type="text/css" href="css/htmleaf-demo.css"> -->
+	<script src="js/modernizr.custom.js"></script>
+	<style type="text/css">
+		body{
+			background-color: #dea450;
+		}
+		.demo{margin-top: 30px;}
+		a:hover,a:focus{
+		    text-decoration: none;
+		    outline: none;
+		}
+		#accordion .panel{
+		    border: none;
+		    box-shadow: none;
+		    border-radius: 0;
+		    margin-top: 0;
+		}
+		#accordion .panel-heading{
+		    padding: 0;
+		    border-radius: 0;
+		    border: none;
+		}
+		#accordion .panel-title a{
+		    display: block;
+		    font-size: 16px;
+		    font-weight: bold;
+		    color: #dea450;
+		    padding: 15px 48px 15px 20px;
+		    background: #9b461f;
+		    position: relative;
+		    transition: all 0.3s ease 0s;
+		}
+		#accordion .panel-title a.collapsed{
+		    color: #9b461f;
+			/* 选框颜色不能用透明的 */
+		    background: rgba(222, 164, 80, 0.56);
+		    border-bottom: 1px solid #3d3537;
+		}
+		#accordion .panel-title a:after,
+		#accordion .panel-title a.collapsed:after{
+		    content: "";
+		    display: block;
+		    width: 3px;
+		    height: 100%;
+		    position: absolute;
+		    top: 0;
+		    right: 30px;
+		    background: rgba(222, 164, 80, 0.56);
+		}
+		#accordion .panel-title a.collapsed:after{
+		    background: #9b461f;
+		}
+		#accordion .panel-title a:before,
+		#accordion .panel-title a.collapsed:before{
+		    content: "\f068";
+		    font-family: FontAwesome;
+		    width: 25px;
+		    height: 25px;
+		    line-height: 25px;
+		    border-radius: 50%;
+		    background: rgba(222, 164, 80, 0.56);
+		    position: absolute;
+		    top: 12px;
+		    right: 19px;
+		    font-size: 14px;
+		    color: #dea450;
+		    text-align: center;
+		    z-index: 1;
+		}
+		#accordion .panel-title a.collapsed:before{
+		    content: "\f067";
+		    color: #dea450;
+		    background: #9b461f;
+		}
+		#accordion .panel-body{
+		    background: #9b461f;
+		    color: #dea450;
+		    padding: 20px 50px 15px 20px;
+		    line-height: 25px;
+		    border: none;
+		    position: relative;
+		}
+		#accordion .panel-body:after{
+		    content: "";
+		    display: block;
+		    width: 3px;
+		    height: 100%;
+		    background: rgba(222, 164, 80, 0.56);
+		    position: absolute;
+		    top: 0;
+		    right: 30px;
+		}
+		span{
+			cursor:pointer;
+		}
+	</style>
+	<!--[if IE]>
+		<script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div class="container" style="background-color: #dea450">
+		
+		<div class="main">
+			
+				<div style="width:79%;float: right;padding: 3vw;margin-right: -10vw;">
+					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+					    <div class="panel panel-default">
+					        <div class="panel-heading" role="tab" id="headingOne">
+					            <h4 class="panel-title">
+					                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+					                    Ch01
+					                </a>
+					            </h4>
+					        </div>
+					        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+					            <div class="panel-body">
+					                <span onclick="window.open('../ch01/ch01-a.html')">任务a. 修改三角形的显示颜色，比如改成蓝色或绿色<br /></span>
+					                <span onclick="window.open('../ch01/ch01-b.html')">任务b. 绘制一个四边形，颜色可任意设置为除红色之外的颜色<br /></span>
+					                <span onclick="window.open('../ch01/ch01-c.html')">任务c. 同时绘制一个三角形和一个四边形，将两者设置为相同的颜色，要求同上<br /></span>
+					                <span onclick="window.open('../ch01/ch01-d.html')">任务d. 将任务c中的三角形和四边形设置为不同的颜色<br /></span>
+					            </div>
+					        </div>
+					    </div>
+					    <div class="panel panel-default">
+					        <div class="panel-heading" role="tab" id="headingTwo">
+					            <h4 class="panel-title">
+					                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+					                    Ch02
+					                </a>
+					            </h4>
+					        </div>
+					        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+					            <div class="panel-body">
+					                 <span onclick="window.open('../ch02/ch02.html')">根据已有的Shader绘制的基本知识，自选主题，绘制一个图案，将绘制代码及网页文件按要求压缩成.zip文件后以附件形式上交，截止时间为9月30日<br /></span>
+					            </div>
+					        </div>
+					    </div>
+					    <div class="panel panel-default">
+					        <div class="panel-heading" role="tab" id="headingThree">
+					            <h4 class="panel-title">
+					                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+					                    Section 3
+					                </a>
+					            </h4>
+					        </div>
+					        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+					            <div class="panel-body">
+					                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacinia lacinia mauris, at ultricies leo ornare nec. Vivamus eu est vel felis dignissim tempor. Nulla facilisi. Duis molestie tortor ac tempor volutpat. Phasellus nec mi aliquet, sollicitudin neque eget, consectetur libero. Vestibulum sollicitudin sapien libero, egestas tempus eros scelerisque eu.
+					            </div>
+					        </div>
+					    </div>
+					    <div class="panel panel-default">
+					        <div class="panel-heading" role="tab" id="headingFour">
+					            <h4 class="panel-title">
+					                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+					                    Section 4
+					                </a>
+					            </h4>
+					        </div>
+					        <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+					            <div class="panel-body">
+					                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacinia lacinia mauris, at ultricies leo ornare nec. Vivamus eu est vel felis dignissim tempor. Nulla facilisi. Duis molestie tortor ac tempor volutpat. Phasellus nec mi aliquet, sollicitudin neque eget, consectetur libero. Vestibulum sollicitudin sapien libero, egestas tempus eros scelerisque eu.
+					            </div>
+					        </div>
+					    </div>
+						<div class="panel panel-default">
+						    <div class="panel-heading" role="tab" id="heading">
+						        <h4 class="panel-title">
+						            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse" aria-expanded="false" aria-controls="collapseFour">
+						                Section 5
+						            </a>
+						        </h4>
+						    </div>
+						    <div id="collapse" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
+						        <div class="panel-body">
+						            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacinia lacinia mauris, at ultricies leo ornare nec. Vivamus eu est vel felis dignissim tempor. Nulla facilisi. Duis molestie tortor ac tempor volutpat. Phasellus nec mi aliquet, sollicitudin neque eget, consectetur libero. Vestibulum sollicitudin sapien libero, egestas tempus eros scelerisque eu.
+						        </div>
+						    </div>
+						</div>
+					</div>
+					
+				</div>
+			
+			<div class="side">
+				
+				<nav class="dr-menu">
+					<div class="dr-trigger"><span class="dr-icon dr-icon-menu"></span><a class="dr-label">Account</a></div>
+					<ul>
+						<li><a class="dr-icon" href="#">计算机图形学</a></li>
+						<li><a class="dr-icon" href="#">web前端</a></li>
+						<li><a class="dr-icon" href="#">软件工程</a></li>
+						<li><a class="dr-icon" href="#">JavaWeb</a></li>
+						<li><a class="dr-icon" href="#">Java</a></li>
+						<!-- <li><a class="dr-icon" href="#">Settings</a></li>
+						<li><a class="dr-icon" href="#">Logout</a></li> -->
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+		
+	        
+	            
+	                <!-- <div style="width: 40%;">
+	                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+	                        <div class="panel panel-default">
+	                            <div class="panel-heading" role="tab" id="headingOne">
+	                                <h4 class="panel-title">
+	                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+	                                        Section 1
+	                                    </a>
+	                                </h4>
+	                            </div>
+	                            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+	                                <div class="panel-body">
+	                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacinia lacinia mauris, at ultricies leo ornare nec. Vivamus eu est vel felis dignissim tempor. Nulla facilisi. Duis molestie tortor ac tempor volutpat. Phasellus nec mi aliquet, sollicitudin neque eget, consectetur libero. Vestibulum sollicitudin sapien libero, egestas tempus eros scelerisque eu.
+	                                </div>
+	                            </div>
+	                        </div>
+	                        <div class="panel panel-default">
+	                            <div class="panel-heading" role="tab" id="headingTwo">
+	                                <h4 class="panel-title">
+	                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+	                                        Section 2
+	                                    </a>
+	                                </h4>
+	                            </div>
+	                            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+	                                <div class="panel-body">
+	                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacinia lacinia mauris, at ultricies leo ornare nec. Vivamus eu est vel felis dignissim tempor. Nulla facilisi. Duis molestie tortor ac tempor volutpat. Phasellus nec mi aliquet, sollicitudin neque eget, consectetur libero. Vestibulum sollicitudin sapien libero, egestas tempus eros scelerisque eu.
+	                                </div>
+	                            </div>
+	                        </div>
+	                        <div class="panel panel-default">
+	                            <div class="panel-heading" role="tab" id="headingThree">
+	                                <h4 class="panel-title">
+	                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+	                                        Section 3
+	                                    </a>
+	                                </h4>
+	                            </div>
+	                            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+	                                <div class="panel-body">
+	                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacinia lacinia mauris, at ultricies leo ornare nec. Vivamus eu est vel felis dignissim tempor. Nulla facilisi. Duis molestie tortor ac tempor volutpat. Phasellus nec mi aliquet, sollicitudin neque eget, consectetur libero. Vestibulum sollicitudin sapien libero, egestas tempus eros scelerisque eu.
+	                                </div>
+	                            </div>
+	                        </div>
+	                        <div class="panel panel-default">
+	                            <div class="panel-heading" role="tab" id="headingFour">
+	                                <h4 class="panel-title">
+	                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+	                                        Section 4
+	                                    </a>
+	                                </h4>
+	                            </div>
+	                            <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+	                                <div class="panel-body">
+	                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacinia lacinia mauris, at ultricies leo ornare nec. Vivamus eu est vel felis dignissim tempor. Nulla facilisi. Duis molestie tortor ac tempor volutpat. Phasellus nec mi aliquet, sollicitudin neque eget, consectetur libero. Vestibulum sollicitudin sapien libero, egestas tempus eros scelerisque eu.
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	            
+	        -->
+	   
+
+	
+	
+	<script src="http://libs.useso.com/js/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-2.1.1.min.js"><\/script>')</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="js/ytmenu.js"></script>
+</body>
+</html>
